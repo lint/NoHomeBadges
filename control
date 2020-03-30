@@ -1,0 +1,9 @@
+Package: com.lint.nohomebadges
+Name: NoHomeBadges
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Removes all notification badges on the home screen.
+Maintainer: lint
+Author: lint
+Section: Tweaks
