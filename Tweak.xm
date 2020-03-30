@@ -18,13 +18,13 @@
 -(void) _createAccessoryViewIfNecessary{
 	
 	if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"13.0")){
-		if (![MSHookIvar<NSString *>(self, "_iconLocation") isEqualToString:@"SBIconLocationRoot"]){
+		if ([MSHookIvar<NSString *>(self, "_iconLocation") isEqualToString:@"SBIconLocationFolder"]){
 			%orig;
 		}
 	} else{
-		if (MSHookIvar<NSInteger>(self, "_iconLocation") != 1){
+		if (MSHookIvar<NSInteger>(self, "_iconLocation") == 6){
 			%orig;
-		}
+		} 
 	}
 }
 
